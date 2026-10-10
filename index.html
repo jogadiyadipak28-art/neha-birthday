@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Neha! 🎂✨</title>
+    <meta name="description" content="A special birthday celebration page for Neha — filled with love, wishes, and magic.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Magical Sparkle Cursor Trail -->
+    <div id="cursor-trail"></div>
+
+    <!-- ====== HERO SECTION ====== -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">✨ A Special Day ✨</div>
+            <h1 class="hero-title animate-slide-up">
+                Happy Birthday
+                <span class="hero-name">Neha</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-delay">
+                Today the world celebrates you — a soul that makes everything brighter. 🌸
+            </p>
+            <button class="hero-cta animate-bounce-in" onclick="scrollToSection('cake')">
+                <span>🎂</span> Make a Wish
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT / TRIBUTE SECTION ====== -->
+    <section id="tribute" class="tribute-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">🌷 To Someone Special</span>
+                <h2 class="section-title">Why You're Amazing</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="tribute-grid">
+                <div class="tribute-card" data-delay="0">
+                    <div class="tribute-icon">💖</div>
+                    <h3>Your Kindness</h3>
+                    <p>Your heart is so big, it could light up the entire universe. You make everyone around you feel special.</p>
+                </div>
+                <div class="tribute-card" data-delay="100">
+                    <div class="tribute-icon">✨</div>
+                    <h3>Your Smile</h3>
+                    <p>That smile of yours? It's pure magic. It can turn the gloomiest day into the most beautiful one.</p>
+                </div>
+                <div class="tribute-card" data-delay="200">
+                    <div class="tribute-icon">🌟</div>
+                    <h3>Your Spirit</h3>
+                    <p>You inspire everyone around you with your strength, grace, and the incredible way you chase your dreams.</p>
+                </div>
+                <div class="tribute-card" data-delay="300">
+                    <div class="tribute-icon">🦋</div>
+                    <h3>Your Laughter</h3>
+                    <p>Your laughter is the most beautiful melody. It fills every room with warmth and pure joy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== INTERACTIVE CAKE SECTION ====== -->
+    <section id="cake" class="cake-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">🎂 The Birthday Cake</span>
+                <h2 class="section-title">Make a Wish & Blow!</h2>
+                <div class="title-underline"></div>
+                <p class="cake-instruction" id="cake-instruction">Click the cake or press the button to blow out the candles! 🌬️</p>
+            </div>
+            <div class="cake-wrapper" id="cake-wrapper">
+                <div class="cake-container" id="cake-container" onclick="blowCandles()">
+                    <!-- Candle Flames -->
+                    <div class="candles-row">
+                        <div class="candle">
+                            <div class="flame-wrapper">
+                                <div class="flame" id="flame-1"></div>
+                                <div class="flame-glow"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame-wrapper">
+                                <div class="flame" id="flame-2"></div>
+                                <div class="flame-glow"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame-wrapper">
+                                <div class="flame" id="flame-3"></div>
+                                <div class="flame-glow"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame-wrapper">
+                                <div class="flame" id="flame-4"></div>
+                                <div class="flame-glow"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame-wrapper">
+                                <div class="flame" id="flame-5"></div>
+                                <div class="flame-glow"></div>
+                            </div>
+                            <div class="candle-stick"></div>
+                        </div>
+                    </div>
+                    <!-- Cake Layers -->
+                    <div class="cake-top-decoration">
+                        <span class="cake-text">Happy Birthday!</span>
+                    </div>
+                    <div class="cake-layer cake-layer-1">
+                        <div class="cake-drip drip-1"></div>
+                        <div class="cake-drip drip-2"></div>
+                        <div class="cake-drip drip-3"></div>
+                        <div class="cake-drip drip-4"></div>
+                        <div class="cake-drip drip-5"></div>
+                    </div>
+                    <div class="cake-layer cake-layer-2">
+                        <div class="cake-pattern"></div>
+                    </div>
+                    <div class="cake-layer cake-layer-3">
+                        <div class="cake-dots">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="cake-plate"></div>
+                </div>
+                <button class="blow-btn" id="blow-btn" onclick="blowCandles()">
+                    🌬️ Blow the Candles!
+                </button>
+                <div class="wish-message hidden" id="wish-message">
+                    <div class="wish-sparkles">✨🎉✨</div>
+                    <h3>Your wish has been sent to the stars! 🌟</h3>
+                    <p>May all your dreams come true, Neha!</p>
+                    <button class="relight-btn" onclick="relightCandles()">🕯️ Relight Candles</button>
+                </div>
+            </div>
+        </div>
+        <!-- Confetti Canvas for cake section -->
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- ====== WISHES / MESSAGES SECTION ====== -->
+    <section id="wishes" class="wishes-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">💌 With Love</span>
+                <h2 class="section-title">Birthday Wishes</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="wishes-grid">
+                <div class="wish-card wish-card-large">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">💐</div>
+                        <blockquote>
+                            "Happy Birthday to someone who is forever young at heart! May this new year bring you nothing but happiness, health, and all the love you deserve. You are a gem, Neha!"
+                        </blockquote>
+                        <div class="wish-author">— With all my love 💕</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+
+                <div class="wish-card">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">🌻</div>
+                        <blockquote>
+                            "Another year of being absolutely fabulous! May your birthday be filled with laughter, cake, and all the things that make your heart sing."
+                        </blockquote>
+                        <div class="wish-author">— Your Biggest Fan ⭐</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+
+                <div class="wish-card">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">🎀</div>
+                        <blockquote>
+                            "You don't just light up a room — you light up the entire world. Wishing the most magical birthday to the most magical person I know!"
+                        </blockquote>
+                        <div class="wish-author">— Forever Grateful 🌈</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+
+                <div class="wish-card">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">🧁</div>
+                        <blockquote>
+                            "Here's to another year of inside jokes, endless memories, and a friendship that means the world. Happy Birthday, superstar!"
+                        </blockquote>
+                        <div class="wish-author">— Always & Forever 🤍</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+
+                <div class="wish-card">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">🎈</div>
+                        <blockquote>
+                            "Age is just a number, but the memories we've made? Priceless. Cheers to creating a million more. Happy Birthday, queen!"
+                        </blockquote>
+                        <div class="wish-author">— Your Partner in Crime 🎭</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+
+                <div class="wish-card">
+                    <div class="wish-card-inner">
+                        <div class="wish-emoji">🌙</div>
+                        <blockquote>
+                            "May your birthday be as bright as your smile and as beautiful as your soul. You deserve all the stars in the sky, Neha."
+                        </blockquote>
+                        <div class="wish-author">— Sending Stardust ✨</div>
+                    </div>
+                    <div class="wish-card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== LETTER SECTION ====== -->
+    <section id="letter" class="letter-section">
+        <div class="section-container">
+            <div class="letter-envelope" id="envelope" onclick="openLetter()">
+                <div class="envelope-flap" id="envelope-flap"></div>
+                <div class="envelope-body">
+                    <span class="envelope-text">💌 Click to Open</span>
+                </div>
+            </div>
+            <div class="letter-paper hidden" id="letter-paper">
+                <div class="letter-content">
+                    <p class="letter-greeting">Dearest Neha,</p>
+                    <p>On this beautiful day, I want you to know just how much you mean to everyone around you. You are not just a friend — you are a blessing, a ray of sunshine, and a reminder that beautiful souls exist in this world.</p>
+                    <p>Thank you for being you. Thank you for every laugh, every late-night conversation, every moment of kindness, and every memory we've shared together.</p>
+                    <p>As you blow out your candles today, know that my wish for you is a life filled with everything that makes your heart full — love, adventure, success, and endless happiness.</p>
+                    <p>Here's to another incredible year of being the amazing Neha that you are! 🥂</p>
+                    <p class="letter-signature">With all my love and warm hugs,<br>
+                    <span class="letter-sign">Your Friend 💖</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="footer-hearts">
+                <span>💖</span><span>🌸</span><span>✨</span><span>🌷</span><span>💖</span>
+            </div>
+            <p class="footer-text">Made with infinite love for <strong>Neha</strong></p>
+            <p class="footer-year">🎂 Happy Birthday 2026 🎂</p>
+        </div>
+    </footer>
+
+    <!-- Background Music Toggle -->
+    <button class="music-toggle" id="music-toggle" onclick="toggleMusic()" title="Toggle Music">
+        <span id="music-icon">🎵</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
